@@ -31,7 +31,7 @@ $(document).ready(function() {
     })
     $('#editor').html(addNode);
     $('#del-btn').click(function() {
-        $('.block').toggleClass('delete');
+        $('#editor').html(addNode);
     });
 });
 
