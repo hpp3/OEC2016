@@ -93,19 +93,24 @@
                     </div>
                 </div>
                 <div class="row" ng-show="mc.currentLesson != 0">
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="padding-bottom:20px; padding-top:20px">
                         <div id='editor'>
                             <div ng-bind-html="mc.codeTemplates[mc.currentLesson]"></div>
                         </div>
-                        <button id='print-btn' class="btn btn-default btn-md" value='feed'>Feed Monster</button>
-                        <button id='ask-btn' class="btn btn-default btn-md" value='ask'>Ask (Conditional)</button>
-                        <button id='repeat-btn' class="btn btn-default btn-md" value='repeat'>Repeat Until...</button>
-                        <button id='for-btn' class="btn btn-default btn-md" value='for'>Repeat # Times</button>
-                        <button id='assign-btn' class="btn btn-default btn-md" value='note'>Note a Value</button>
-                        <button id='recipe-btn' class="btn btn-default btn-md" value='Create Recipe'>Create Recipe</button>
-                        <button id='call-btn' class="btn btn-default btn-md" value='Use Recipe'>Use Recipe</button>
-                        <button id='run-btn' class="btn btn-success btn-md" value='run' ng-click="parse">Run</button>
                     </div>
+                    <div class="col-md-6">
+                        <button id='print-btn' class="btn btn-default btn-block" value='feed'>Feed Monster</button>
+                        <button id='ask-btn' class="btn btn-default btn-block" value='ask'>Ask (Conditional)</button>
+                        <button id='repeat-btn' class="btn btn-default btn-block" value='repeat'>Repeat Until...</button>
+                        <button id='for-btn' class="btn btn-default btn-block" value='for'>Repeat # Times</button>
+                    </div>  
+                    <div class="col-md-6">
+                        <button id='assign-btn' class="btn btn-default btn-block" value='note'>Note a Value</button>
+                        <button id='recipe-btn' class="btn btn-default btn-block" value='Create Recipe'>Create Recipe</button>
+                        <button id='call-btn' class="btn btn-default btn-block" value='Use Recipe'>Use Recipe</button>
+                        <button id='run-btn' class="btn btn-success btn-block" value='run' ng-click="parse">Run</button>
+                    </div>
+
                 </div>
             </div>
             <div class="col-md-4" ng-show="mc.currentLesson != 0">
