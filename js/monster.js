@@ -1,9 +1,3 @@
-window.onload = function() {
-	document.getElementById("run-btn").addEventListener('click', function() {
-		parse();
-	})
-}
-
 function guid() {
 	return 'd' + Math.floor(Math.random()*1000001);
 }

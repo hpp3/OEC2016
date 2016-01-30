@@ -18,8 +18,9 @@
     <link href="css/heroic-features.css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='css/mock.css'>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.1.0/lodash.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.1.0/lodash.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="./js/MainController.js"></script>
     <script src="./js/StoryFactory.js"></script>
@@ -36,6 +37,7 @@
 </head>
 
 <body ng-controller="MainController as mc">
+
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -96,7 +98,7 @@
                         <div ng-bind-html="mc.stories[mc.currentLesson]"></div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" ng-if="mc.currentLesson != 0">
                     <div class="col-md-12">
                         <div id='editor'>
                             <div class='add' onclick='addClick(this)'></div>
@@ -114,15 +116,21 @@
                         <button id='ask-btn' class="btn btn-default btn-md" value='ask'>Ask (Conditional)</button>
                         <button id='repeat-btn' class="btn btn-default btn-md" value='repeat'>Repeat Until...</button>
                         <button id='for-btn' class="btn btn-default btn-md" value='for'>Repeat # Times</button>
-                        <button id='run-btn' class="btn btn-success btn-md" value='run'>Run</button>
+                        <button id='run-btn' class="btn btn-success btn-md" value='run' ng-click="parse">Run</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" ng-if="mc.currentLesson != 0">
                 This is the results section.
                 Click Activate to activate next lesson (This will be triggered automatically later when user passes this lesson).
                 <button type="button" class="btn btn-default btn-lg" ng-click="mc.enableNextLesson()">
                     Activate
+                </button>
+            </div>
+            <div class="col-md-4" ng-if="mc.currentLesson == 0">
+                <p>This is the results section. Throughout the lesson the results of running the code will be displayed here.</p>
+                <button type="button" class="btn btn-success btn-lg" ng-click="mc.continueLesson()">
+                    Continue
                 </button>
             </div>
         </div>
