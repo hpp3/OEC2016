@@ -42,9 +42,10 @@ function helper(dom) {
 			eval_str += helper(elem) + ";\n";
 		} else if (elem.classList.contains("for")) {
 			var loopName = guid();
-			var times = elem.getAttribute("val");
+			var times = $(find_class_child(elem, "val")).val();
+			var body = find_class_child(elem, "loop");
 			eval_str += "for (var " + loopName + "=0; " + loopName + "<" + times + "; " + loopName + "++) {\n";
-			eval_str += helper(elem);
+			eval_str += helper(body);
 			eval_str += "}\n";
 		} else if (elem.classList.contains("repeat")) {
 			var cond = find_class_child(elem, "cond");
