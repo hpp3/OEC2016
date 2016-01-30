@@ -24,7 +24,7 @@ $(document).ready(function() {
         toggleActive();
     });
     $('#assign-btn').click(function() {
-        activeNode = "<div class='assign block'><span class='delete' onclick='delClick(this)'>X</span><input class='val' type='text' placeholder='post-it note = value' value=''></div>";
+        activeNode = "<div class='assign block'><span class='delete' onclick='delClick(this)'>X</span><input class='val' type='text' placeholder='name_of_note = value' value=''></div>";
         toggleActive();
     });
     $('#editor').html(addNode);
