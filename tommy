@@ -1,22 +1,22 @@
-oh no, batman got captured by a scary monster. little batman must
-feed the monster so the monster doesn't get hungry. the following code
-tells batman to feed the monster. press start to see what happens
+Oh no, Batman got captured by a scary monster. Batman must
+feed the monster so the monster doesn't get hungry. The following code
+tells Batman to feed the monster. Press run to see what happens.
 
 code: feed_monster
 
 result:
-batman fed the monster
+Batman fed the monster
 the monster is happy
 
 
 ===
 
 
-congratulations, batman survived the first day! little batman
+congratulations, Batman survived the first day! Batman
 woke up the second day and tries to feed the monster again, the monster
-is not hungry and got mad at batman. the monster tells little batman
-that is batman feed the monster again when the monster is not 
-hungry, the monster is going to eat batman. little batman needs
+is not hungry and got mad at Batman. the monster tells Batman
+that is Batman feed the monster again when the monster is not 
+hungry, the monster is going to eat Batman. Batman needs
 to ask the monster if the monster is hungry before trying to feed it.
 
 we can use the ask instruction to ask a question. 
@@ -25,25 +25,25 @@ we can use the ask instruction to ask a question.
         (yes action)
     no: 
         (no action)
-if the answer is yes, batman will do the yes action,
-if the answer is no, batman will do the no action
+if the answer is yes, Batman will do the yes action,
+if the answer is no, Batman will do the no action
 
 code:
-ask dropdown(monster is hungry, sky is blue, batman is sad)
+ask dropdown(monster is hungry, sky is blue, Batman is sad)
 yes:
     feed monster
 no:
     do nothing
 
 result:
-monster is hungry, batman fed the monster
+monster is hungry, Batman fed the monster
 the monster is happy
 
 
 ===
 
-the monster wants batman to pick some fruits for the monster to eat
-the monster gave batman some post-it notes to write down the number
+the monster wants Batman to pick some fruits for the monster to eat
+the monster gave Batman some post-it notes to write down the number
 of each fruits to buy. you can write down a number on a post-it note
 using the <- instruction
 
@@ -57,14 +57,14 @@ apples <- 4
 exaimne apples
 
 the monster wants 13 apples and 7 bananas, write these down on post-it notes
-so batman can remember latter
+so Batman can remember latter
 
 
 ===
 
 
 
-each time batman feeds the monster a fruit, he should update the post-it
+each time Batman feeds the monster a fruit, he should update the post-it
 notes for that fruit, he can do this using the <- instructions
 
 apples <- apples - 1
@@ -74,10 +74,10 @@ erase what is written on the apples post-it note, then write down the number
 minus one
 
 
-the monster woke up very hungry, batman must feed the monster 20 times or else
+the monster woke up very hungry, Batman must feed the monster 20 times or else
 he will be eaten, to do this, we write the instruction feed_monster 20 times,
 but this is very long and we might miscount the number of feed_monster we write
-which will cause batman to get eaten. instead, lets use a loop
+which will cause Batman to get eaten. instead, lets use a loop
 
 a loop is something that execute a instruction multiple times, lets look
 at the repeat until loop
@@ -98,9 +98,9 @@ post-it note labeled feed by one.
 ===
 
 
-after living with the monster for a while, batman is beginning to understand
-the monster's habits. everyday batman needs to pick 13 apples and 7 bananas.
-batman then needs to try to feed the monster 20 times. each time batman must
+after living with the monster for a while, Batman is beginning to understand
+the monster's habits. everyday Batman needs to pick 13 apples and 7 bananas.
+Batman then needs to try to feed the monster 20 times. each time Batman must
 check if the monster is actually hungry and only feed the monster if the monster
 is actually hungry.
 
@@ -108,8 +108,8 @@ is actually hungry.
 ===
 
 
-batman decided to escaped from the monster. in case someone else is captured
-by the monster, batman decided to write down the recipes to keep the monster
+Batman decided to escaped from the monster. in case someone else is captured
+by the monster, Batman decided to write down the recipes to keep the monster
 happy.
 
 recipe pick_23_apples:
