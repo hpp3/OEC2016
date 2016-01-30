@@ -40,15 +40,17 @@ function helper(dom) {
 			//eval_str += "print " + helper(elem) + "\n";
 		} else if (elem.classList.contains("assign")) {
 			eval_str += helper(elem) + ";\n";
-		} else if (elem.classList.contains("repeat")) {
+		} else if (elem.classList.contains("for")) {
 			var loopName = guid();
 			var times = elem.getAttribute("val");
 			eval_str += "for (var " + loopName + "=0; " + loopName + "<" + times + "; " + loopName + "++) {\n";
 			eval_str += helper(elem);
 			eval_str += "}\n";
-		} else if (elem.classList.contains("while")) {
-			eval_str += "while (" + elem.getAttribute("val") + ") {\n";
-			eval_str += helper(elem);
+		} else if (elem.classList.contains("repeat")) {
+			var cond = find_class_child(elem, "cond");
+			var body = find_class_child(elem, "loop");
+			eval_str += "while (!(" + cond.options[cond.selectedIndex].text + ")) {\n";
+			eval_str += helper(body);
 			eval_str += "}\n";
 		} else if (elem.classList.contains("val")) {
 			eval_str += $(elem).val();
