@@ -9,7 +9,7 @@ batman fed the monster
 the monster is happy
 
 
-
+===
 
 
 congratulations, batman survived the first day! little batman
@@ -40,7 +40,7 @@ monster is hungry, batman fed the monster
 the monster is happy
 
 
-
+===
 
 the monster wants batman to pick some fruits for the monster to eat
 the monster gave batman some post-it notes to write down the number
@@ -60,7 +60,7 @@ the monster wants 13 apples and 7 bananas, write these down on post-it notes
 so batman can remember latter
 
 
-
+===
 
 
 
@@ -95,7 +95,7 @@ we move on with our lives. however, if the answer is yes, we must feed the
 monster, and then update the post-it note. we decrease the number on the 
 post-it note labeled feed by one. 
 
-
+===
 
 
 after living with the monster for a while, batman is beginning to understand
@@ -105,7 +105,7 @@ check if the monster is actually hungry and only feed the monster if the monster
 is actually hungry.
 
 
-
+===
 
 
 batman decided to escaped from the monster. in case someone else is captured
@@ -125,6 +125,7 @@ pick_23_apples
 
 result:
 
+===
 
 write down the recipe for keeping the monster happy
 
