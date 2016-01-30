@@ -1,5 +1,6 @@
 #editor div:not(.add) {
-    border: black solid;
+    border: lightgrey solid 1px;
+    border-radius: 4px;
     min-width:100px;
     min-height:50px;
     padding: 5px;
@@ -8,16 +9,14 @@
 #editor {
 
 }
-.ask {
-
-}
 .add.active::before {
     content: '+';
 }
 .add:not(.active)::before {
 }
 .add {
-    border: black solid;
+    border: lightgrey dashed 1px;
+    border-radius: 4px;
     margin: 2px;
     min-width:10px;
     min-height:5px;
