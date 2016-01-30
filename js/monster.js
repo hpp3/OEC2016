@@ -2,6 +2,10 @@ window.onload = function() {
     parse();
 }
 
+function guid() {
+	return 'd' + Math.floor(Math.random()*1000001);
+}
+
 function parse() {
 	var editor = document.getElementById("editor");
 	console.log(editor.innerHTML);
@@ -31,6 +35,16 @@ function helper(dom) {
 			eval_str += "print " + elem.getAttribute("val") + "\n";
 		} else if (elem.classList.contains("assign")) {
 			eval_str += elem.getAttribute("val") + ";\n";
+		} else if (elem.classList.contains("repeat")) {
+			var loopName = guid();
+			var times = elem.getAttribute("val");
+			eval_str += "for (var " + loopName + "=0; " + loopName + "<" + times + "; " + loopName + "++) {\n";
+			eval_str += helper(elem);
+			eval_str += "}\n";
+		} else if (elem.classList.contains("while")) {
+			eval_str += "while (" + elem.getAttribute("val") + ") {\n";
+			eval_str += helper(elem);
+			eval_str += "}\n";
 		}
 	}
 	return eval_str;
