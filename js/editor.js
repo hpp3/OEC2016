@@ -21,6 +21,7 @@ $(document).ready(function() {
         activeNode = "<div class='print block'><input class='val' type='text' value='1'></div>";
         $('.add').toggleClass('active');
     });
+    $('#editor').html(addNode);
 });
 
 var activeNode = null;

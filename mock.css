@@ -1,8 +1,9 @@
-#editor > div:not(.add) {
+#editor div:not(.add) {
     border: black solid;
     min-width:100px;
     min-height:50px;
     padding: 5px;
+    margin: 2px;
 }
 #editor {
 
@@ -14,12 +15,12 @@
     content: '+';
 }
 .add:not(.active)::before {
-    content: '.';
 }
 .add {
     border: black solid;
+    margin: 2px;
     min-width:10px;
-    min-height:10px;
+    min-height:5px;
 }
 .ask::before {
     content: "ask: ";

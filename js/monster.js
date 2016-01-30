@@ -52,6 +52,12 @@ function helper(dom) {
 			eval_str += $(elem).val();
 		} else if (elem.classList.contains("cond")) {
 			eval_str += elem
+		} else if (elem.classList.contains("recipe")) {
+			eval_str += "function " + elem.getAttribute('val') + '() {\n';
+			eval_str += helper(elem);
+			eval_str += '}\n';
+		} else if (elem.classList.contains("run")) {
+			eval_str += elem.getAttribute('val') + '();\n';
 		}
 	}
 	return eval_str;

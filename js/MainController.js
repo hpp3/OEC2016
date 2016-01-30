@@ -1,15 +1,22 @@
 var app = angular.module('oecApp', []);
 
-app.controller('MainController', function() {
+app.controller('MainController', function(StoryFactory, $sce) {
 
     var mainController = this;
-    this.totalLessons = 10;
+    this.stories = [];
+    this.totalLessons = 0;
     this.currentLesson = 0;
     this.lessonEnabled = 0; // index if the highest lesson enabled
 
-    this.getNumber = function(num) {
-        return new Array(num);
-    };
+    StoryFactory.getStories(function (res) {
+        _.each(res.data, function (story, i) {
+           res.data[i] = $sce.trustAsHtml(story);
+        });
+        mainController.stories = res.data;
+        mainController.totalLessons = mainController.stories.length;
+    }, function(res) {
+        console.log(res);
+    });
 
     this.canGoToNextLesson = function() {
         var nextLesson = this.currentLesson + 1;
@@ -57,5 +64,4 @@ app.controller('MainController', function() {
     this.enableNextLesson = function() {
         this.lessonEnabled += 1;
     };
-
 });

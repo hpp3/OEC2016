@@ -3,31 +3,16 @@
 <script src='js/monster.js'></script>
 <script src='js/editor.js'></script>
 <link rel='stylesheet' type='text/css' href='mock.css'>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 <body>
-hi this is a mock
 <div id='editor'>
     <div class='add' onclick='addClick(this)'></div>
-    <!--
-    <div class='ask block' cond='a==5'>
-        <div class='add '></div>
-        <div class='yes branch'>
-            <div class='add '></div>
-            <div class='repeat' val='4'>
-            	<div class='print block' val='1'></div>
-            	<div class='assign' val='apples=10'></div>
-            </div>
-            <div class='add '></div>
+    <div class='recipe' val='pick_apples'>
+        <div class='print'>
+            <input class='val' value='123'>
         </div>
-        <div class='no branch'>
-            <div class='add '></div>
-            <div class='while' val='apples<5'>
-            	<div class='print block' val='2'></div>
-        	</div>
-            <div class='add '></div>
-        </div>
-        <div class='add '></div>
     </div>
-    -->
+    <div class='run' val='pick_apples'></div>
 </div>
 
 <input id='print-btn' type='button' value='print'>
