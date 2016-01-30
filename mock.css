@@ -1,39 +1,54 @@
+#editor {
+    min-width: 300px;
+    min-height: 600px;
+    border: lightgrey solid 1px;
+    border-radius: 4px;
+    margin: 2px;
+}
+
 #editor div:not(.add) {
     border: lightgrey solid 1px;
     border-radius: 4px;
     min-width:100px;
-    min-height:50px;
+    min-height:30px;
     padding: 5px;
     margin: 2px;
-}
-#editor {
-
 }
 .add.active::before {
     content: '+';
 }
 .add:not(.active)::before {
 }
+
+.add:not(.active) {
+    cursor: default;
+}
+
 .add {
     border: lightgrey dashed 1px;
     border-radius: 4px;
     margin: 2px;
     min-width:10px;
     min-height:5px;
+    cursor: pointer;
 }
+
 .ask::before {
-    content: "ask: ";
+    content: "Ask: is ";
 }
 
 .repeat::before {
-    content: "repeat: ";
+    content: "Repeat: ";
 }
 .yes::before {
-    content: "yes:";
+    content: "If Yes:";
 }
 .no::before {
-    content: "no:";
+    content: "If No:";
 }
 .print::before {
-    content: "print ";
+    content: "Feed Monster";
+}
+.for-inp {
+    width: 20px;
 }
