@@ -24,6 +24,12 @@
     cursor: default;
 }
 
+.delete {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
 .add {
     border: lightgrey dashed 1px;
     border-radius: 4px;
