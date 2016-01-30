@@ -13,7 +13,7 @@ div {
 .add.active::before {
     content: '+';
 }
-.add.inactive::before {
+.add:not(.active)::before {
     content: '.';
 }
 .add {
