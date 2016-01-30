@@ -16,9 +16,9 @@ function parse() {
     console.log(eval_str);
     try {
 		var result = eval(eval_str);
-		$('#eval-code-results').html(result);
+		$('#eval-code-results').html(result + '</b><img src="/images/happy.gif" height="350" style="display:block"></img>');
 	} catch (e) {
-		$('#eval-code-results').html("<b>ERROR: " + e.message + "</b>");
+		$('#eval-code-results').html("<b>ERROR: " + e.message + '</b><img src="/images/angry.gif" height="350" style="display:block"></img>');
 	}
 	console.log(result);
 }
