@@ -19,13 +19,20 @@
 }
 .add:not(.active)::before {
 }
+
+.add:not(.active) {
+    cursor: default;
+}
+
 .add {
     border: lightgrey dashed 1px;
     border-radius: 4px;
     margin: 2px;
     min-width:10px;
     min-height:5px;
+    cursor: pointer;
 }
+
 .ask::before {
     content: "Ask: is ";
 }
