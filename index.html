@@ -85,10 +85,26 @@
 
         <!-- Jumbotron Header -->
         <div class="row hero-spacer">
-            <div class="col-md-12">Currently on Lesson {{mc.currentLesson + 1}}</div>
-            <button type="button" class="btn btn-default btn-lg" ng-click="mc.enableNextLesson()">
-                Activate Next Lesson (This will be triggered automatically later when user passes this lesson)
-            </button>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        Currently on Lesson {{mc.currentLesson + 1}}.
+                        This is where to put the story.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        This is where the code is.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                This is the results section.
+                Click Activate to activate next lesson (This will be triggered automatically later when user passes this lesson).
+                <button type="button" class="btn btn-default btn-lg" ng-click="mc.enableNextLesson()">
+                    Activate
+                </button>
+            </div>
         </div>
 
         <hr>
