@@ -1,71 +1,71 @@
-oh no, little tommy got captured by a scary monster. little tommy must
+oh no, batman got captured by a scary monster. little batman must
 feed the monster so the monster doesn't get hungry. the following code
-tells little tommy to feed the monster. press start to see what happens
+tells batman to feed the monster. press start to see what happens
 
-code: feed monster
+code: feed_monster
 
 result:
-little tommy fed the monster
+batman fed the monster
 the monster is happy
 
 
 
 
 
-congratulations, little tommy survived the first day! little tommy
+congratulations, batman survived the first day! little batman
 woke up the second day and tries to feed the monster again, the monster
-is not hungry and got mad at little tommy. the monster tells little tommy
-that is little tommy feed the monster again when the monster is not 
-hungry, the monster is going to eat little tommy. little tommy needs
+is not hungry and got mad at batman. the monster tells little batman
+that is batman feed the monster again when the monster is not 
+hungry, the monster is going to eat batman. little batman needs
 to ask the monster if the monster is hungry before trying to feed it.
 
-we can use the ask statement to ask a question. 
+we can use the ask instruction to ask a question. 
     ask (question)
     yes: 
         (yes action)
     no: 
         (no action)
-if the answer is yes, little tommy will do the yes action,
-if the answer is no, little tommy will do the no action
+if the answer is yes, batman will do the yes action,
+if the answer is no, batman will do the no action
 
 code:
-ask dropdown(monster is hungry, sky is blue, tommy is sad)
+ask dropdown(monster is hungry, sky is blue, batman is sad)
 yes:
     feed monster
 no:
     do nothing
 
 result:
-monster is hungry, little tommy fed the monster
+monster is hungry, batman fed the monster
 the monster is happy
 
 
 
 
-the monster wants tommy to pick some fruits for the monster to eat
-the monster gave tommy some post-it notes to write down the number
+the monster wants batman to pick some fruits for the monster to eat
+the monster gave batman some post-it notes to write down the number
 of each fruits to buy. you can write down a number on a post-it note
-using the <- statement
+using the <- instruction
 
 apples <- 3
 
 this writes down the number three on a post-it note with the label apple
 you can examine the number on this post-it note later by using the examine
-statement
+instruction
 
 apples <- 4
 exaimne apples
 
-the monster wants 3 apples and 4 bananas, write these down on post-it notes
-so little tommy can remember latter
+the monster wants 13 apples and 7 bananas, write these down on post-it notes
+so batman can remember latter
 
 
 
 
 
 
-each time little tommy feeds the monster a fruit, he should update the post-it
-notes for that fruit, he can do this using the <- statements
+each time batman feeds the monster a fruit, he should update the post-it
+notes for that fruit, he can do this using the <- instructions
 
 apples <- apples - 1
 
@@ -74,5 +74,57 @@ erase what is written on the apples post-it note, then write down the number
 minus one
 
 
+the monster woke up very hungry, batman must feed the monster 20 times or else
+he will be eaten, to do this, we write the instruction feed_monster 20 times,
+but this is very long and we might miscount the number of feed_monster we write
+which will cause batman to get eaten. instead, lets use a loop
 
-the monster told tommy it wants to eat 100
+a loop is something that execute a instruction multiple times, lets look
+at the repeat until loop
+
+feed <- 20
+repeat until: feed is 0?
+no:
+    feed_monster
+    feed <- feed - 1
+
+what happened here? well we first write down the number of times we need to
+feed the monster on a post-it note. then we check if the post-it note to see if
+the number of times we still have to feed the monster is 0. if the answer is yes, 
+we move on with our lives. however, if the answer is yes, we must feed the 
+monster, and then update the post-it note. we decrease the number on the 
+post-it note labeled feed by one. 
+
+
+
+
+after living with the monster for a while, batman is beginning to understand
+the monster's habits. everyday batman needs to pick 13 apples and 7 bananas.
+batman then needs to try to feed the monster 20 times. each time batman must
+check if the monster is actually hungry and only feed the monster if the monster
+is actually hungry.
+
+
+
+
+
+batman decided to escaped from the monster. in case someone else is captured
+by the monster, batman decided to write down the recipes to keep the monster
+happy.
+
+recipe pick_23_apples:
+    apples <- 23
+    repeat until: apples is 0?
+        pick apples
+        apples <- apples - 1
+
+this creates a recipe labeled pick_3_apples that teaches someone how to pick
+23 apples. to follow the recipe, just write the recipe name
+
+pick_23_apples
+
+result:
+
+
+write down the recipe for keeping the monster happy
+
