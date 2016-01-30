@@ -1,0 +1,26 @@
+div {
+    border: black solid;
+    min-width:100px;
+    min-height:50px;
+}
+.editor {
+
+}
+.ask {
+
+}
+.block {
+
+}
+.ask::before {
+    content: "ask: " attr(cond) "?";
+}
+.yes::before {
+    content: "yes:";
+}
+.no::before {
+    content: "yes:";
+}
+.print::before {
+    content: "print " attr(val);
+}
