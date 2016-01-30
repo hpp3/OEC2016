@@ -118,7 +118,11 @@
                 </div>
             </div>
             <div class="col-md-4" ng-show="mc.currentLesson != 0">
-                <div id="eval-code-results"></div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Result</div>
+                    <div class="panel-body" id="eval-code-results">
+                    </div>
+                </div>
                 <button type="button" class="btn btn-success btn-lg" ng-click="mc.continueLesson()">
                     Continue
                 </button>
