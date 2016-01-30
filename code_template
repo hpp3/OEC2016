@@ -34,11 +34,7 @@
 
 ===
 
-
-===
-<!--no code for this one-->
 ===
 
-
-
-
+===
+<div class="add" onclick="addClick(this)"></div>
