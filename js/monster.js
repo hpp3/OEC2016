@@ -11,8 +11,8 @@ function guid() {
 function parse() {
 	var editor = document.getElementById("editor");
 	console.log(editor);
-	var eval_str = helper(editor);
-	console.log(eval_str);
+	var eval_str = 'var OUTPUT = "";\n' + helper(editor) + 'OUTPUT;';
+	console.log(eval(eval_str));
 }
 
 function find_class_child(dom, className) {
@@ -35,7 +35,8 @@ function helper(dom) {
 			eval_str += helper(yes);
 			eval_str += "} else {\n" + helper(no) + "}\n";
 		} else if (elem.classList.contains("print")) {
-			eval_str += "print " + helper(elem) + "\n";
+			eval_str += 'OUTPUT += "Batman fed the monster\\n";\n';
+			//eval_str += "print " + helper(elem) + "\n";
 		} else if (elem.classList.contains("assign")) {
 			eval_str += elem.getAttribute("val") + ";\n";
 		} else if (elem.classList.contains("repeat")) {
