@@ -1,5 +1,7 @@
 window.onload = function() {
-    parse();
+	document.getElementById("run-btn").addEventListener('click', function() {
+		parse();
+	})
 }
 
 function guid() {
@@ -8,7 +10,7 @@ function guid() {
 
 function parse() {
 	var editor = document.getElementById("editor");
-	console.log(editor.innerHTML);
+	console.log(editor);
 	var eval_str = helper(editor);
 	console.log(eval_str);
 }
@@ -26,13 +28,14 @@ function helper(dom) {
 	for (var i = 0; i < dom.children.length; i++) {
 		var elem = dom.children[i];
 		if (elem.classList.contains("ask")) {
-			eval_str += "if (" + elem.getAttribute("cond") + ") {\n";
+			var cond = find_class_child(elem, "cond");
+			eval_str += "if (" + cond.options[cond.selectedIndex].text + ") {\n";
 			var yes = find_class_child(elem, "yes");
 			var no = find_class_child(elem, "no");
 			eval_str += helper(yes);
 			eval_str += "} else {\n" + helper(no) + "}\n";
 		} else if (elem.classList.contains("print")) {
-			eval_str += "print " + elem.getAttribute("val") + "\n";
+			eval_str += "print " + helper(elem) + "\n";
 		} else if (elem.classList.contains("assign")) {
 			eval_str += elem.getAttribute("val") + ";\n";
 		} else if (elem.classList.contains("repeat")) {
@@ -45,6 +48,10 @@ function helper(dom) {
 			eval_str += "while (" + elem.getAttribute("val") + ") {\n";
 			eval_str += helper(elem);
 			eval_str += "}\n";
+		} else if (elem.classList.contains("val")) {
+			eval_str += elem.getAttribute("value");
+		} else if (elem.classList.contains("cond")) {
+			eval_str += elem
 		}
 	}
 	return eval_str;
