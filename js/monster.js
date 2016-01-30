@@ -2,7 +2,7 @@ window.onload = function() {
     document.getElementById("run-btn").addEventListener('click', function() {
         parse();
     });
-	
+
 }
 
 function guid() {
