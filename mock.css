@@ -35,5 +35,5 @@
     content: "no:";
 }
 .print::before {
-    content: "print ";
+    content: "feed ";
 }

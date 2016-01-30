@@ -18,7 +18,7 @@ $(document).ready(function() {
         $('.add').toggleClass('active');
     });
     $('#print-btn').click(function() {
-        activeNode = "<div class='print block'><input class='val' type='text' value='1'></div>";
+        activeNode = "<div class='print block'></div>";
         $('.add').toggleClass('active');
     });
     $('#editor').html(addNode);
