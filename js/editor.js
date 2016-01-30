@@ -20,7 +20,6 @@ function withAdd(node) {
     return addNode + node + addNode;
 }
 function addClick(t) {
-    console.log(t);
     if ($(t).hasClass('active')) {
         $('.add').toggleClass('active');
         $(t).replaceWith(withAdd(activeNode));

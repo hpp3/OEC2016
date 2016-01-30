@@ -49,7 +49,7 @@ function helper(dom) {
 			eval_str += helper(elem);
 			eval_str += "}\n";
 		} else if (elem.classList.contains("val")) {
-			eval_str += elem.getAttribute("value");
+			eval_str += $(elem).val();
 		} else if (elem.classList.contains("cond")) {
 			eval_str += elem
 		}
