@@ -15,13 +15,14 @@ is not hungry and got mad at Batman. The monster tells Batman
 that is Batman feed the monster again when the monster is not 
 hungry, the monster is going to eat Batman. Batman needs
 to ask the monster if the monster is hungry before trying to feed it.
-
+<pre>
 we can use the ask instruction to ask a question. 
     ask (question)
     yes: 
         (yes action)
     no: 
         (no action)
+</pre>
 if the answer is yes, Batman will do the yes action,
 if the answer is no, Batman will do the no action
 
@@ -31,9 +32,9 @@ The monster wants Batman to pick some fruits for the monster to eat.
 The monster gave Batman some Post-it notes to write down the number
 of each fruits to buy. You can write down a number on a Post-it note
 using the = instruction.
-
+<pre>
 apples = 3
-
+</pre>
 This writes down the number three on a Post-it note with the label apple.
 
 
@@ -48,7 +49,9 @@ so Batman can remember later.
 Each time Batman feeds the monster a fruit, he should update the Post-it
 notes. He can do this using the = instruction.
 
+<pre>
 apples = apples - 1
+</pre>
 
 This says, examine the current number written on the apples post-it note,
 erase what is written on the post-it note, then write down the number
@@ -67,11 +70,13 @@ which will cause Batman to get eaten. Instead, lets use a loop.
 A loop is something that execute a instruction multiple times, lets look
 at the repeat until loop:
 
+<pre>
 feed = 20
-repeat until: feed is 0?
+repeat until: feed is 0
 no:
     feed_monster
     feed = feed - 1
+</pre>
 
 What happened here? Well we first write down the number of times we need to
 feed the monster on a post-it note. Then we check if the Post-it note to see if
@@ -95,11 +100,13 @@ happy.
 
 You can write a recipe using the following syntax:
 
+<pre>
 recipe pick_23_apples:
-    apples <- 23
-    repeat until: apples is 0?
+    apples = 23
+    repeat until: apples is 0
         pick apples
-        apples <- apples - 1
+        apples = apples - 1
+</pre>
 
 This creates a recipe labeled pick_23_apples, and give the instruction
 to pick, you guessed it, 23 apples.

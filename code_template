@@ -8,8 +8,23 @@
 
 ===
 
-
-ask
+<div id="editor">
+<div class="add" onclick="addClick(this)"></div>
+<div class="assign block">
+<span class="delete" onclick="delClick(this)">X</span>
+<input class="val" type="text" placeholder="post-it note = value" value=""></div>
+<div class="add" onclick="addClick(this)"></div>
+<div class="ask block">
+<span class="delete" onclick="delClick(this)">X</span>
+<input class="cond" type="text" value="1==0">?<div class="yes">
+<div class="add" onclick="addClick(this)"></div> 
+</div>
+<div class="no">
+<div class="add" onclick="addClick(this)"></div>
+</div>
+</div>
+<div class="add" onclick="addClick(this)">
+</div>
 
 
 ===
