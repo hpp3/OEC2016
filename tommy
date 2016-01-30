@@ -1,4 +1,4 @@
-<h1>Welcome to Code Camp</h1>
+<h1>Welcome to the Monster Code Camp</h1>
 
 <img src="../images/monster.png" height="350" style="display:block">
 ===
@@ -113,3 +113,10 @@ This creates a recipe labeled pick_23_apples, and give the instruction
 to pick, you guessed it, 23 apples.
 
 Write down the recipe for keeping the monster happy
+
+===
+
+<h1>Congratulations, you are finished! :)</h1>
+<h2>Feel free to experiment with the language on your own now.</h2>
+
+===

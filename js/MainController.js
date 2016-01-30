@@ -27,7 +27,13 @@ app.controller('MainController', function(StoryFactory, $sce) {
 
     function updateTemplate() {
         var currentTemplate = this.codeTemplates[mainController.currentLesson];
-        $('#editor').html(currentTemplate);
+        if (currentTemplate) {
+            console.log(1);
+            $('#editor').html(currentTemplate);
+        } else {
+            console.log(2);
+            $('#editor').html("<div class='add' onclick='addClick(this)'></div>");
+        }
     }
 
     this.canGoToNextLesson = function() {
