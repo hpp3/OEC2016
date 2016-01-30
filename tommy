@@ -1,0 +1,78 @@
+oh no, little tommy got captured by a scary monster. little tommy must
+feed the monster so the monster doesn't get hungry. the following code
+tells little tommy to feed the monster. press start to see what happens
+
+code: feed monster
+
+result:
+little tommy fed the monster
+the monster is happy
+
+
+
+
+
+congratulations, little tommy survived the first day! little tommy
+woke up the second day and tries to feed the monster again, the monster
+is not hungry and got mad at little tommy. the monster tells little tommy
+that is little tommy feed the monster again when the monster is not 
+hungry, the monster is going to eat little tommy. little tommy needs
+to ask the monster if the monster is hungry before trying to feed it.
+
+we can use the ask statement to ask a question. 
+    ask (question)
+    yes: 
+        (yes action)
+    no: 
+        (no action)
+if the answer is yes, little tommy will do the yes action,
+if the answer is no, little tommy will do the no action
+
+code:
+ask dropdown(monster is hungry, sky is blue, tommy is sad)
+yes:
+    feed monster
+no:
+    do nothing
+
+result:
+monster is hungry, little tommy fed the monster
+the monster is happy
+
+
+
+
+the monster wants tommy to pick some fruits for the monster to eat
+the monster gave tommy some post-it notes to write down the number
+of each fruits to buy. you can write down a number on a post-it note
+using the <- statement
+
+apples <- 3
+
+this writes down the number three on a post-it note with the label apple
+you can examine the number on this post-it note later by using the examine
+statement
+
+apples <- 4
+exaimne apples
+
+the monster wants 3 apples and 4 bananas, write these down on post-it notes
+so little tommy can remember latter
+
+
+
+
+
+
+each time little tommy feeds the monster a fruit, he should update the post-it
+notes for that fruit, he can do this using the <- statements
+
+apples <- apples - 1
+
+this says, examine the current number written on the apples post-it note, 
+erase what is written on the apples post-it note, then write down the number
+minus one
+
+
+
+the monster told tommy it wants to eat 100
