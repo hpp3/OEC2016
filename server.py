@@ -38,5 +38,20 @@ def get_stories():
     return Response(json.dumps(stories),  mimetype='application/json')
 
 
+@app.route('/code_templates')
+def get_code_templates():
+    templates = []
+    with open('code_template', 'r') as f:
+        template = ''
+        for line in f:
+            if line == '===\n':
+                templates.append(template)
+                template = ''
+            elif line != '\n':
+                template += line
+
+    return Response(json.dumps(templates),  mimetype='application/json')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

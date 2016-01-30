@@ -95,16 +95,7 @@
                 <div class="row" ng-show="mc.currentLesson != 0">
                     <div class="col-md-12">
                         <div id='editor'>
-                            <div class='add' onclick='addClick(this)'></div>
-                            <div class='recipe' val='pick_apples'>
-                                <div class='print'>
-                                    <input class='val' value='123'>
-                                </div>
-                            </div>
-                            <div class='run' val='pick_apples'></div>
-                            <div class='repeat' val='8'>
-                                <div class='run' val='pick_apples'></div>
-                            </div>
+                            <div ng-bind-html="mc.codeTemplates[mc.currentLesson]"></div>
                         </div>
                         <button id='print-btn' class="btn btn-default btn-md" value='feed'>Feed Monster</button>
                         <button id='ask-btn' class="btn btn-default btn-md" value='ask'>Ask (Conditional)</button>

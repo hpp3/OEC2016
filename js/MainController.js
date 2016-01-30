@@ -4,6 +4,7 @@ app.controller('MainController', function(StoryFactory, $sce) {
 
     var mainController = this;
     this.stories = [];
+    this.codeTemplates = [];
     this.totalLessons = 0;
     this.currentLesson = 0;
     this.lessonEnabled = 0; // index if the highest lesson enabled
@@ -17,6 +18,17 @@ app.controller('MainController', function(StoryFactory, $sce) {
     }, function(res) {
         console.log(res);
     });
+
+    StoryFactory.getCodeTemplates(function (res) {
+        this.codeTemplates = res.data;
+    }, function(res) {
+        console.log(res);
+    });
+
+    function updateTemplate() {
+        var currentTemplate = this.codeTemplates[mainController.currentLesson];
+        $('#editor').html(currentTemplate);
+    }
 
     this.canGoToNextLesson = function() {
         var nextLesson = this.currentLesson + 1;
@@ -47,6 +59,7 @@ app.controller('MainController', function(StoryFactory, $sce) {
         if (this.canGoToLesson(lessonIndex)) {
             this.currentLesson = lessonIndex;
             $('#eval-code-results').html('');
+            updateTemplate();
         }
     };
 
@@ -54,6 +67,7 @@ app.controller('MainController', function(StoryFactory, $sce) {
         if (this.canGoToNextLesson()) {
             this.currentLesson += 1;
             $('#eval-code-results').html('');
+            updateTemplate();
         }
     };
 
@@ -61,6 +75,7 @@ app.controller('MainController', function(StoryFactory, $sce) {
         if (this.canGoToPrevLesson()) {
             this.currentLesson -= 1;
             $('#eval-code-results').html('');
+            updateTemplate();
         }
     };
 

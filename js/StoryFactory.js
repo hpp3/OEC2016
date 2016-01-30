@@ -7,8 +7,16 @@ app.factory('StoryFactory', function($http) {
         }).then(successCallback, errorCallback);
     }
 
+    function getCodeTemplates(successCallback, errorCallback) {
+        $http({
+          method: 'GET',
+          url: '/code_templates'
+        }).then(successCallback, errorCallback);
+    }
+
     return {
-        getStories: getStories
+        getStories: getStories,
+        getCodeTemplates: getCodeTemplates
     }
 
 });
