@@ -45,5 +45,6 @@ function addClick(t) {
     }
 }
 function delClick(t) {
+    $(t).parent().prev().remove(); //remove extra add
     $(t).parent().remove();
 }
