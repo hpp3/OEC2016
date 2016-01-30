@@ -8,13 +8,17 @@ $(document).ready(function() {
         activeNode += "</select>?<div class='yes'>"+addNode+"</div><div class='no'>"+addNode+"</div></div>";
         $('.add').toggleClass('active');
     });
+    $('#for-btn').click(function() {
+        activeNode = "<div class='for block'>Repeat <input class='val for-inp' type='text' value='2'> times</div>";
+        $('.add').toggleClass('active');
+    });
     $('#repeat-btn').click(function() {
-        var options = ['num=0?'];
+        var options = ['num==0'];
         activeNode = "<div class='repeat block'><select class='cond'>";
         options.forEach(function(each) {
             activeNode += "<option>" + each + "</option>";
         });
-        activeNode += "</select>?<div class='no'>"+addNode+"</div></div>";
+        activeNode += "</select><div class='loop'>"+addNode+"</div></div>";
         $('.add').toggleClass('active');
     });
     $('#print-btn').click(function() {
