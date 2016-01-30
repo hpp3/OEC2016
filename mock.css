@@ -24,6 +24,9 @@
     cursor: default;
 }
 
+.delete {
+    background-color: lightred;
+}
 .add {
     border: lightgrey dashed 1px;
     border-radius: 4px;

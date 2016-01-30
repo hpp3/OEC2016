@@ -9,7 +9,7 @@ $(document).ready(function() {
         $('.add').toggleClass('active');
     });
     $('#for-btn').click(function() {
-        activeNode = "<div class='for block'>Repeat <input class='val for-inp' type='text' value='2'> times</div>";
+        activeNode = "<div class='for block'>Repeat <input class='val for-inp' type='text' value='2'> times<div class='loop'>"+addNode+"</div></div>";
         $('.add').toggleClass('active');
     });
     $('#repeat-btn').click(function() {
@@ -30,6 +30,9 @@ $(document).ready(function() {
         $('.add').toggleClass('active');
     })
     $('#editor').html(addNode);
+    $('#del-btn').click(function() {
+        $('.block').toggleClass('delete');
+    });
 });
 
 var activeNode = null;
