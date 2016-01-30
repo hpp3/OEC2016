@@ -21,7 +21,7 @@ div {
     min-height:10px;
 }
 .ask::before {
-    content: "ask: " attr(cond) "?";
+    content: "ask: ";
 }
 .yes::before {
     content: "yes:";
@@ -30,5 +30,5 @@ div {
     content: "no:";
 }
 .print::before {
-    content: "print " attr(val);
+    content: "print ";
 }
