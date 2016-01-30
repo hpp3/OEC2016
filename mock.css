@@ -1,10 +1,10 @@
-div {
+#editor > div:not(.add) {
     border: black solid;
     min-width:100px;
     min-height:50px;
     padding: 5px;
 }
-.editor {
+#editor {
 
 }
 .ask {
@@ -17,11 +17,16 @@ div {
     content: '.';
 }
 .add {
+    border: black solid;
     min-width:10px;
     min-height:10px;
 }
 .ask::before {
     content: "ask: ";
+}
+
+.repeat::before {
+    content: "repeat: ";
 }
 .yes::before {
     content: "yes:";
