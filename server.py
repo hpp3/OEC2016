@@ -54,4 +54,4 @@ def get_code_templates():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
