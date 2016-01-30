@@ -12,6 +12,7 @@ function parse() {
 	var editor = document.getElementById("editor");
 	console.log(editor);
 	var eval_str = 'var OUTPUT = "";\n' + helper(editor) + 'OUTPUT;';
+    console.log(eval_str)
 	console.log(eval(eval_str));
 }
 

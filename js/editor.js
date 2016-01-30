@@ -21,6 +21,10 @@ $(document).ready(function() {
         activeNode = "<div class='print block'><input class='val' type='text' value='1'></div>";
         $('.add').toggleClass('active');
     });
+    $('#assign-btn').click(function() {
+        activeNode = "<div class='assign block'><input class='val' type='text' placeholder='post-it note = value' val=''></div>";
+        $('.add').toggleClass('active');
+    })
     $('#editor').html(addNode);
 });
 
