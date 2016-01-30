@@ -14,9 +14,13 @@ function parse() {
 	console.log(editor);
 	var eval_str = 'var OUTPUT = "";\n' + helper(editor) + 'OUTPUT;';
     console.log(eval_str);
-	var result = eval(eval_str);
+    try {
+		var result = eval(eval_str);
+		$('#eval-code-results').html(result);
+	} catch (e) {
+		$('#eval-code-results').html("<b>ERROR: " + e.message + "</b>");
+	}
 	console.log(result);
-	$('#eval-code-results').html(result);
 }
 
 function find_class_child(dom, className) {
