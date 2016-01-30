@@ -1,17 +1,27 @@
 <html>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
 <script src='js/monster.js'></script>
+<script src='js/editor.js'></script>
 <link rel='stylesheet' type='text/css' href='mock.css'>
 <body>
 hi this is a mock
 <div id='editor'>
     <div class='ask block' cond='a==5'>
+        <div class='add '></div>
         <div class='yes branch'>
-            <div class='print' val='1'></div>
+            <div class='add '></div>
+            <div class='print block' val='1'></div>
+            <div class='add '></div>
         </div>
         <div class='no branch'>
-            <div class='print' val='2'></div>
+            <div class='add '></div>
+            <div class='print block' val='2'></div>
+            <div class='add '></div>
         </div>
+        <div class='add '></div>
     </div>
 </div>
+
+<input id='print1' type='button' value='Print 1'>
 </body>
 </html>

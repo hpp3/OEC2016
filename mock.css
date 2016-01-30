@@ -2,6 +2,7 @@ div {
     border: black solid;
     min-width:100px;
     min-height:50px;
+    padding: 5px;
 }
 .editor {
 
@@ -9,8 +10,15 @@ div {
 .ask {
 
 }
-.block {
-
+.add.active::before {
+    content: '+';
+}
+.add.inactive::before {
+    content: '.';
+}
+.add {
+    min-width:10px;
+    min-height:10px;
 }
 .ask::before {
     content: "ask: " attr(cond) "?";
@@ -19,7 +27,7 @@ div {
     content: "yes:";
 }
 .no::before {
-    content: "yes:";
+    content: "no:";
 }
 .print::before {
     content: "print " attr(val);
