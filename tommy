@@ -32,32 +32,20 @@ we can use the ask instruction to ask a question.
 if the answer is yes, Batman will do the yes action,
 if the answer is no, Batman will do the no action
 
-code:
-ask dropdown(monster is hungry, sky is blue, Batman is sad)
-yes:
-    feed monster
-no:
-    do nothing
-
-result:
-monster is hungry, Batman fed the monster
-the monster is happy
-
-
 ===
 
 the monster wants Batman to pick some fruits for the monster to eat
 the monster gave Batman some post-it notes to write down the number
 of each fruits to buy. you can write down a number on a post-it note
-using the <- instruction
+using the = instruction
 
-apples <- 3
+apples = 3
 
 this writes down the number three on a post-it note with the label apple
 you can examine the number on this post-it note later by using the examine
 instruction
 
-apples <- 4
+apples = 4
 exaimne apples
 
 the monster wants 13 apples and 7 bananas, write these down on post-it notes
@@ -76,6 +64,12 @@ apples <- apples - 1
 this says, examine the current number written on the apples post-it note, 
 erase what is written on the apples post-it note, then write down the number
 minus one
+
+write 20 onto post-it note labeled apple
+then decrease the number on the post it note by 3
+
+===
+
 
 
 the monster woke up very hungry, Batman must feed the monster 20 times or else
@@ -108,10 +102,6 @@ Batman then needs to try to feed the monster 20 times. each time Batman must
 check if the monster is actually hungry and only feed the monster if the monster
 is actually hungry.
 
-
-===
-
-
 Batman decided to escaped from the monster. in case someone else is captured
 by the monster, Batman decided to write down the recipes to keep the monster
 happy.
@@ -122,14 +112,6 @@ recipe pick_23_apples:
         pick apples
         apples <- apples - 1
 
-this creates a recipe labeled pick_3_apples that teaches someone how to pick
-23 apples. to follow the recipe, just write the recipe name
-
-pick_23_apples
-
-result:
-
-===
 
 write down the recipe for keeping the monster happy
-
+(hint, pick )
