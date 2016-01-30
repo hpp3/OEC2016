@@ -24,8 +24,10 @@ we can use the ask instruction to ask a question.
     no: 
         (no action)
 </pre>
-if the answer is yes, Batman will do the yes action,
-if the answer is no, Batman will do the no action
+If the answer is yes, Batman will do the yes action,
+If the answer is no, Batman will do the no action
+
+Can you ensure Batman feed the monster only when monster if hungry?
 
 ===
 
