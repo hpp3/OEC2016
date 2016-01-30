@@ -29,6 +29,8 @@ function helper(dom) {
 			eval_str += "} else {\n" + helper(no) + "}\n";
 		} else if (elem.classList.contains("print")) {
 			eval_str += "print " + elem.getAttribute("val") + "\n";
+		} else if (elem.classList.contains("assign")) {
+			eval_str += elem.getAttribute("val") + ";\n";
 		}
 	}
 	return eval_str;
