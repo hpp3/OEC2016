@@ -59,11 +59,14 @@ function helper(dom) {
 		} else if (elem.classList.contains("cond")) {
 			eval_str += elem
 		} else if (elem.classList.contains("recipe")) {
-			eval_str += "function " + elem.getAttribute('val') + '() {\n';
-			eval_str += helper(elem);
+			var name = find_class_child(elem, "name");
+			var body = find_class_child(elem, "body");
+			eval_str += "function " + $(name).val() + '() {\n';
+			eval_str += helper(body);
 			eval_str += '}\n';
-		} else if (elem.classList.contains("run")) {
-			eval_str += elem.getAttribute('val') + '();\n';
+		} else if (elem.classList.contains("call")) {
+			var name = find_class_child(elem, "name");
+			eval_str += $(name).val() + '();\n';
 		}
 	}
 	return eval_str;
