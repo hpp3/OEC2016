@@ -15,10 +15,18 @@ $(document).ready(function() {
         activeNode = "<div class='print block'><span class='delete' onclick='delClick(this)'>X</span></div>";
         $('.add').toggleClass('active');
     });
-    $('#assign-btn').click(function() {
-        activeNode = "<div class='assign block'><span class='delete' onclick='delClick(this)'>X</span><input class='val' type='text' placeholder='post-it note = value' val=''></div>";
+    $('#recipe-btn').click(function() {
+        activeNode = "<div class='recipe block'><span class='delete' onclick='delClick(this)'>X</span>define <input class='name' type='text' placeholder='subRoutine' value=''>:<div class='body'>"+addNode+"</div></div>";
         $('.add').toggleClass('active');
-    })
+    });
+    $('#call-btn').click(function() {
+        activeNode = "<div class='call block'><span class='delete' onclick='delClick(this)'>X</span>Use Subroutine <input class='name' type='text' placeholder='subRoutine' value=''></div>";
+        $('.add').toggleClass('active');
+    });
+    $('#assign-btn').click(function() {
+        activeNode = "<div class='assign block'><span class='delete' onclick='delClick(this)'>X</span><input class='val' type='text' placeholder='post-it note = value' value=''></div>";
+        $('.add').toggleClass('active');
+    });
     $('#editor').html(addNode);
     $('#del-btn').click(function() {
         $('#editor').html(addNode);
@@ -37,5 +45,6 @@ function addClick(t) {
     }
 }
 function delClick(t) {
+    $(t).parent().prev().remove(); //remove extra add
     $(t).parent().remove();
 }

@@ -13,7 +13,7 @@ function parse() {
 	var editor = document.getElementById("editor");
 	console.log(editor);
 	var eval_str = 'var OUTPUT = "";\n' + helper(editor) + 'OUTPUT;';
-    console.log(eval_str)
+    console.log(eval_str);
 	console.log(eval(eval_str));
 }
 
@@ -31,7 +31,7 @@ function helper(dom) {
 		var elem = dom.children[i];
 		if (elem.classList.contains("ask")) {
 			var cond = find_class_child(elem, "cond");
-			eval_str += "if (" + cond.options[cond.selectedIndex].text + ") {\n";
+			eval_str += "if (" + $(cond).val() + ") {\n";
 			var yes = find_class_child(elem, "yes");
 			var no = find_class_child(elem, "no");
 			eval_str += helper(yes);
@@ -51,7 +51,7 @@ function helper(dom) {
 		} else if (elem.classList.contains("repeat")) {
 			var cond = find_class_child(elem, "cond");
 			var body = find_class_child(elem, "loop");
-			eval_str += "while (!(" + cond.options[cond.selectedIndex].text + ")) {\n";
+			eval_str += "while (!(" + $(cond).val() + ")) {\n";
 			eval_str += helper(body);
 			eval_str += "}\n";
 		} else if (elem.classList.contains("val")) {
