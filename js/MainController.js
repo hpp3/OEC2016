@@ -64,4 +64,11 @@ app.controller('MainController', function(StoryFactory, $sce) {
     this.enableNextLesson = function() {
         this.lessonEnabled += 1;
     };
+
+    this.continueLesson = function() {
+        this.enableNextLesson();
+        this.goToNextLesson();
+    };
+
+    this.parse = parse;
 });
