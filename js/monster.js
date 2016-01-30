@@ -14,7 +14,9 @@ function parse() {
 	console.log(editor);
 	var eval_str = 'var OUTPUT = "";\n' + helper(editor) + 'OUTPUT;';
     console.log(eval_str);
-	console.log(eval(eval_str));
+	var result = eval(eval_str);
+	console.log(result);
+	$('#eval-code-results').html(result);
 }
 
 function find_class_child(dom, className) {
@@ -59,11 +61,14 @@ function helper(dom) {
 		} else if (elem.classList.contains("cond")) {
 			eval_str += elem
 		} else if (elem.classList.contains("recipe")) {
-			eval_str += "function " + elem.getAttribute('val') + '() {\n';
-			eval_str += helper(elem);
+			var name = find_class_child(elem, "name");
+			var body = find_class_child(elem, "body");
+			eval_str += "function " + $(name).val() + '() {\n';
+			eval_str += helper(body);
 			eval_str += '}\n';
-		} else if (elem.classList.contains("run")) {
-			eval_str += elem.getAttribute('val') + '();\n';
+		} else if (elem.classList.contains("call")) {
+			var name = find_class_child(elem, "name");
+			eval_str += $(name).val() + '();\n';
 		}
 	}
 	return eval_str;

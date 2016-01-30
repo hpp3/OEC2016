@@ -57,12 +57,6 @@
                     <li>
                         <a href="#">About</a>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -98,7 +92,7 @@
                         <div ng-bind-html="mc.stories[mc.currentLesson]"></div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" ng-show="mc.currentLesson != 0">
                     <div class="col-md-12">
                         <div id='editor'>
                             <div class='add' onclick='addClick(this)'></div>
@@ -116,19 +110,20 @@
                         <button id='ask-btn' class="btn btn-default btn-md" value='ask'>Ask (Conditional)</button>
                         <button id='repeat-btn' class="btn btn-default btn-md" value='repeat'>Repeat Until...</button>
                         <button id='for-btn' class="btn btn-default btn-md" value='for'>Repeat # Times</button>
-                        <button id='assign-btn' class="btn btn-default btn-md" value='assign'>Write Post-it</button>
+                        <button id='assign-btn' class="btn btn-default btn-md" value='Overwrite Post-it'>Overwrite Post-it</button>
+                        <button id='recipe-btn' class="btn btn-default btn-md" value='Create Recipe'>Create Recipe</button>
+                        <button id='call-btn' class="btn btn-default btn-md" value='Use Recipe'>Use Recipe</button>
                         <button id='run-btn' class="btn btn-success btn-md" value='run' ng-click="parse">Run</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" ng-if="mc.currentLesson != 0">
-                This is the results section.
-                Click Activate to activate next lesson (This will be triggered automatically later when user passes this lesson).
-                <button type="button" class="btn btn-default btn-lg" ng-click="mc.enableNextLesson()">
-                    Activate
+            <div class="col-md-4" ng-show="mc.currentLesson != 0">
+                <div id="eval-code-results"></div>
+                <button type="button" class="btn btn-success btn-lg" ng-click="mc.continueLesson()">
+                    Continue
                 </button>
             </div>
-            <div class="col-md-4" ng-if="mc.currentLesson == 0">
+            <div class="col-md-4" ng-show="mc.currentLesson == 0">
                 <p>This is the results section. Throughout the lesson the results of running the code will be displayed here.</p>
                 <button type="button" class="btn btn-success btn-lg" ng-click="mc.continueLesson()">
                     Continue

@@ -46,18 +46,21 @@ app.controller('MainController', function(StoryFactory, $sce) {
     this.goToLesson = function(lessonIndex) {
         if (this.canGoToLesson(lessonIndex)) {
             this.currentLesson = lessonIndex;
+            $('#eval-code-results').html('');
         }
     };
 
     this.goToNextLesson = function() {
         if (this.canGoToNextLesson()) {
             this.currentLesson += 1;
+            $('#eval-code-results').html('');
         }
     };
 
     this.goToPrevLesson = function() {
         if (this.canGoToPrevLesson()) {
             this.currentLesson -= 1;
+            $('#eval-code-results').html('');
         }
     };
 
