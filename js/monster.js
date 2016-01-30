@@ -39,7 +39,7 @@ function helper(dom) {
 			eval_str += 'OUTPUT += "Batman fed the monster\\n";\n';
 			//eval_str += "print " + helper(elem) + "\n";
 		} else if (elem.classList.contains("assign")) {
-			eval_str += elem.getAttribute("val") + ";\n";
+			eval_str += helper(elem) + ";\n";
 		} else if (elem.classList.contains("repeat")) {
 			var loopName = guid();
 			var times = elem.getAttribute("val");
