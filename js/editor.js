@@ -1,11 +1,6 @@
 $(document).ready(function() {
     $('#ask-btn').click(function() {
-        var options = ['1==1', '1==0'];
-        activeNode = "<div class='ask block'><select class='cond'>";
-        options.forEach(function(each) {
-            activeNode += "<option>" + each + "</option>";
-        });
-        activeNode += "</select>?<div class='yes'>"+addNode+"</div><div class='no'>"+addNode+"</div></div>";
+        activeNode = "<div class='ask block'><input class='cond' type='text' value='1==0'>?<div class='yes'>"+addNode+"</div><div class='no'>"+addNode+"</div></div>";
         $('.add').toggleClass('active');
     });
     $('#for-btn').click(function() {
@@ -13,12 +8,7 @@ $(document).ready(function() {
         $('.add').toggleClass('active');
     });
     $('#repeat-btn').click(function() {
-        var options = ['num==0'];
-        activeNode = "<div class='repeat block'><select class='cond'>";
-        options.forEach(function(each) {
-            activeNode += "<option>" + each + "</option>";
-        });
-        activeNode += "</select><div class='loop'>"+addNode+"</div></div>";
+        activeNode = "<div class='repeat block'><input class='cond' type='text' value='1==0'>:<div class='loop'>"+addNode+"</div></div>";
         $('.add').toggleClass('active');
     });
     $('#print-btn').click(function() {
