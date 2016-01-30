@@ -12,11 +12,11 @@
     <title>Monster Coding</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cosmo/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/heroic-features.css" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' href='mock.css'>
+    <link rel='stylesheet' type='text/css' href='css/mock.css'>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.1.0/lodash.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
@@ -100,7 +100,20 @@
                     <div class="col-md-12">
                         <div id='editor'>
                             <div class='add' onclick='addClick(this)'></div>
+                            <div class='recipe' val='pick_apples'>
+                                <div class='print'>
+                                    <input class='val' value='123'>
+                                </div>
+                            </div>
+                            <div class='run' val='pick_apples'></div>
+                            <div class='repeat' val='8'>
+                                <div class='run' val='pick_apples'></div>
+                            </div>
                         </div>
+                        <button id='print-btn' class="btn btn-default btn-md" value='print'>print</button>
+                        <button id='ask-btn' class="btn btn-default btn-md" value='ask'>ask</button>
+                        <button id='repeat-btn' class="btn btn-default btn-md" value='repeat'>repeat</button>
+                        <button id='run-btn' class="btn btn-success btn-md" value='run'>run</button>
                     </div>
                 </div>
             </div>
