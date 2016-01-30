@@ -1,0 +1,9 @@
+
+===
+
+<div class="add" onclick="addClick(this)"></div>
+<div class="print block">
+<span class="delete" onclick="delClick(this)">X</span></div>
+<div class="add" onclick="addClick(this)"></div>
+
+===
