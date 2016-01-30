@@ -48,7 +48,7 @@
 }
 
 .repeat::before {
-    content: "Repeat: ";
+    content: "Repeat Until: ";
 }
 .yes::before {
     content: "If Yes:";
